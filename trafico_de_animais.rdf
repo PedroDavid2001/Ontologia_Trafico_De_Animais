@@ -1,0 +1,1757 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/"
+     xml:base="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:trafico-de-animais="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais">
+        <rdfs:comment>Esta ontologia tem como objetivo principal elencar os diferentes tipos de tráfico e contrabando de animais explicitando suas principais rotas de transporte e apresentar, para cada tipo, as espécies de animais afetadas; os danos causados ao ambiente daquelas espécies; além das leis e fiscalização relacionadas a essas ações.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#abrange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#abrange">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Regiao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#atuaEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#atuaEm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Regiao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#causa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#causa">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#causadoPor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Efeitos_Na_Biodiversidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#causadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#causadoPor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Efeitos_Na_Biodiversidade"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeadoEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeadoEm">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#ocorreContrabandoDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeadoPor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeia"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeia">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeiaEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeiaEm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Vias_De_Escoamento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#estaNaCategoria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#estaNaCategoria">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Categoria_De_Risco"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#fiscaliza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#fiscaliza">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#fiscalizadoPor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#fiscalizaNoPais -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#fiscalizaNoPais">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#fiscalizadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#fiscalizadoPor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#nativoDoPais -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#nativoDoPais">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#ocorreContrabandoDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#ocorreContrabandoDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#operaEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#operaEm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Vias_De_Escoamento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#realizadoEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#realizadoEm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#regulamenta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#regulamenta">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#regulamentadoPor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Decreto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#regulamentadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#regulamentadoPor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Decreto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#rotaDoPais -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#rotaDoPais">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#temComoFinal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#temComoFinal">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Regiao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#temComoOrigem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#temComoOrigem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Regiao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#temNivelDeEfeito -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#temNivelDeEfeito">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Efeitos_Na_Biodiversidade"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nivel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#temNivelDeFiscalizacao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#temNivelDeFiscalizacao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nivel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#traficaNoPais -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#traficaNoPais">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#utiliza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#utiliza">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#utilizadoPor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#utilizadoNaRegiao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#utilizadoNaRegiao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Regiao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#utilizadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#utilizadoPor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#vigenteEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#vigenteEm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Decreto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Data_De_Promulgacao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Data_De_Promulgacao">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Decreto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extracao_De_Partes_Do_Animal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extracao_De_Partes_Do_Animal">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nome_Cientifico -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nome_Cientifico">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nome_Comum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nome_Comum">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nome_Do_Decreto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nome_Do_Decreto">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Decreto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nome_Do_Fiscalizador -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nome_Do_Fiscalizador">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Punicao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Punicao">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Decreto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Sigla_Do_Fiscalizador -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Sigla_Do_Fiscalizador">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Categoria_De_Risco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Categoria_De_Risco">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Criticamente_Em_Risco"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Dados_Deficientes"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Em_Perigo"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extinto"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extinto_Na_Natureza"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Menos_Preocupante"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nao_Avaliado"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Quase_Ameacado"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Vulneravel"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Contrabando_Do_Especime_Viva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Contrabando_Do_Especime_Viva">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extracao_De_Partes_Do_Animal"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Decreto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Decreto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Efeitos_Na_Biodiversidade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Efeitos_Na_Biodiversidade"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especie_Ameacada_De_Extincao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especie_Ameacada_De_Extincao">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#estaNaCategoria"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Criticamente_Em_Risco"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#estaNaCategoria"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Em_Perigo"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#estaNaCategoria"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extinto_Na_Natureza"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#estaNaCategoria"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Quase_Ameacado"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#estaNaCategoria"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Vulneravel"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especie_Extinta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especie_Extinta">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#estaNaCategoria"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extinto"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especie_Nao_Preocupante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especie_Nao_Preocupante">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#estaNaCategoria"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Menos_Preocupante"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeadoEm"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeadoPor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#nativoDoPais"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#atuaEm"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Regiao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#fiscaliza"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#utiliza"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Impacto_Na_Fauna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Impacto_Na_Fauna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Efeitos_Na_Biodiversidade"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Impacto_Na_Flora"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Impacto_Na_Flora -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Impacto_Na_Flora">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Efeitos_Na_Biodiversidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nivel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nivel">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Alto"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Ausente"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Baixo"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Medio"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Regiao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Regiao">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Centro"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Centro-Oeste"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Leste"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nordeste"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Norte"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Oeste"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Sudeste"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Sul"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Trafico_De_Partes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Trafico_De_Partes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extracao_De_Partes_Do_Animal"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Vias_De_Escoamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Vias_De_Escoamento">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Aereo"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Maritmo"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Terrestre"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Aereo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Aereo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Alto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Alto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Arara_Azul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Arara_Azul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+        <trafico-de-animais:contrabandeadoPor rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Trafico_De_Arara_Azul"/>
+        <trafico-de-animais:estaNaCategoria rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Vulneravel"/>
+        <trafico-de-animais:nativoDoPais rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Brasil"/>
+        <trafico-de-animais:Nome_Cientifico>Anodorhynchus hyacinthinus</trafico-de-animais:Nome_Cientifico>
+        <trafico-de-animais:Nome_Comum>Arara-azul</trafico-de-animais:Nome_Comum>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Ausente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Ausente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nivel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#BPF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#BPF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador"/>
+        <trafico-de-animais:Nome_Do_Fiscalizador>Batalhão da Polícia Florestal</trafico-de-animais:Nome_Do_Fiscalizador>
+        <trafico-de-animais:Sigla_Do_Fiscalizador>BPF</trafico-de-animais:Sigla_Do_Fiscalizador>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Baixo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Baixo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Brasil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Brasil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Caca_Do_Dodo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Caca_Do_Dodo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+        <trafico-de-animais:causa rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Desestabilizacao_Da_Piramide_Alimentar"/>
+        <trafico-de-animais:contrabandeia rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Dodo"/>
+        <trafico-de-animais:contrabandeiaEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Maritmo"/>
+        <trafico-de-animais:realizadoEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Caca_Do_Dodo"/>
+        <trafico-de-animais:Extracao_De_Partes_Do_Animal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</trafico-de-animais:Extracao_De_Partes_Do_Animal>
+        <rdfs:comment>É importante ressaltar o seguinte ponto: o Dodô foi extinto, principalmente, pela caça para consumo, mas isso não exclui a possibilidade de contrabandos e outras causas de sua extinção.
+    
+Optei por caça devido aos dados históricos que demonstram uma enorme caça que ocorreu dessa espécie para consumo.
+    
+A propriedade &quot;contrabandeiaEm&quot; está apontando para &quot;Marítmo&quot;, pois esta espécie era nativa de ilhas e grande parte dos caçadores e possíveis contrabandistas eram marinheiros.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Centro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Centro"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Centro-Oeste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Centro-Oeste"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Contrabando_Do_Papa_Capim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Contrabando_Do_Papa_Capim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+        <trafico-de-animais:causa rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Destruicao_De_Habitat_Natural"/>
+        <trafico-de-animais:realizadoEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_De_Papa_Capim"/>
+        <trafico-de-animais:Extracao_De_Partes_Do_Animal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</trafico-de-animais:Extracao_De_Partes_Do_Animal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Criticamente_Em_Risco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Criticamente_Em_Risco"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Dados_Deficientes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Dados_Deficientes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Danos_Ao_Ecossistema -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Danos_Ao_Ecossistema">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Impacto_Na_Flora"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Desestabilizacao_Da_Piramide_Alimentar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Desestabilizacao_Da_Piramide_Alimentar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Impacto_Na_Fauna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Desmatamento_Da_Vegetacao_Local -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Desmatamento_Da_Vegetacao_Local">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Impacto_Na_Flora"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Destruicao_De_Habitat_Natural -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Destruicao_De_Habitat_Natural">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Impacto_Na_Fauna"/>
+        <trafico-de-animais:causadoPor rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extracao_De_Marfim_Do_Elefante"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Dodo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Dodo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+        <trafico-de-animais:estaNaCategoria rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extinto"/>
+        <trafico-de-animais:nativoDoPais rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Republica_Das_Ilhas_Mauricias"/>
+        <trafico-de-animais:Nome_Cientifico>Raphus cucullatus</trafico-de-animais:Nome_Cientifico>
+        <trafico-de-animais:Nome_Comum>Dodo</trafico-de-animais:Nome_Comum>
+        <rdfs:comment>Esta ontologia foca na fauna brasileira, mas como o Dodô é, infelizmente, o animal referência quando se trata de extinção, criei um indivíduo dele. Além disso foi interessante adicioná-lo para testar o reasoner com outros paises, que, neste caso, foi a República das Ilhas Maurícias.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Elefantes_Africano_De_Savana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Elefantes_Africano_De_Savana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+        <trafico-de-animais:contrabandeadoPor rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extracao_De_Marfim_Do_Elefante"/>
+        <trafico-de-animais:estaNaCategoria rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Em_Perigo"/>
+        <trafico-de-animais:nativoDoPais rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Tanzania"/>
+        <trafico-de-animais:Nome_Cientifico>Loxodonta africana</trafico-de-animais:Nome_Cientifico>
+        <trafico-de-animais:Nome_Comum>Elefante-africano-de-savana</trafico-de-animais:Nome_Comum>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Em_Perigo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Em_Perigo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Entrada_De_Especies_Nao_Nativas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Entrada_De_Especies_Nao_Nativas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Impacto_Na_Fauna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extinto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extinto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extinto_Na_Natureza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extinto_Na_Natureza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extracao_De_Marfim_Do_Elefante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extracao_De_Marfim_Do_Elefante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+        <trafico-de-animais:realizadoEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Extracao_De_Marfim_Do_Elefante"/>
+        <trafico-de-animais:Extracao_De_Partes_Do_Animal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</trafico-de-animais:Extracao_De_Partes_Do_Animal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizacao_Aerea_Centro-Oeste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizacao_Aerea_Centro-Oeste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+        <trafico-de-animais:operaEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Aereo"/>
+        <trafico-de-animais:temNivelDeFiscalizacao rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Baixo"/>
+        <trafico-de-animais:utilizadoNaRegiao rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Centro-Oeste"/>
+        <trafico-de-animais:utilizadoPor rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#BPF"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizacao_Aerea_Norte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizacao_Aerea_Norte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+        <trafico-de-animais:operaEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Aereo"/>
+        <trafico-de-animais:temNivelDeFiscalizacao rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Ausente"/>
+        <trafico-de-animais:utilizadoNaRegiao rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Norte"/>
+        <trafico-de-animais:utilizadoPor rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#IBAMA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizacao_Maritma_Norte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizacao_Maritma_Norte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+        <trafico-de-animais:operaEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Maritmo"/>
+        <trafico-de-animais:temNivelDeFiscalizacao rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Medio"/>
+        <trafico-de-animais:utilizadoNaRegiao rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Norte"/>
+        <trafico-de-animais:utilizadoPor rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#IBAMA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizacao_Terrestre_Centro-Oeste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizacao_Terrestre_Centro-Oeste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+        <trafico-de-animais:operaEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Terrestre"/>
+        <trafico-de-animais:temNivelDeFiscalizacao rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Baixo"/>
+        <trafico-de-animais:utilizadoNaRegiao rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Centro-Oeste"/>
+        <trafico-de-animais:utilizadoPor rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#BPF"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizacao_Terrestre_Nordeste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizacao_Terrestre_Nordeste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+        <trafico-de-animais:operaEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Terrestre"/>
+        <trafico-de-animais:temNivelDeFiscalizacao rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Ausente"/>
+        <trafico-de-animais:utilizadoNaRegiao rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nordeste"/>
+        <trafico-de-animais:utilizadoPor rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#PMA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizacao_Terrestre_Sudeste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizacao_Terrestre_Sudeste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+        <trafico-de-animais:operaEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Terrestre"/>
+        <trafico-de-animais:temNivelDeFiscalizacao rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Baixo"/>
+        <trafico-de-animais:utilizadoNaRegiao rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Sudeste"/>
+        <trafico-de-animais:utilizadoPor rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#PMA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#IBAMA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#IBAMA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador"/>
+        <trafico-de-animais:fiscaliza rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_Da_Arara_Azul"/>
+        <trafico-de-animais:fiscaliza rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_Do_Macaco_Prego_Dourado"/>
+        <trafico-de-animais:Nome_Do_Fiscalizador>Instituto Brasileiro do Meio Ambiente</trafico-de-animais:Nome_Do_Fiscalizador>
+        <trafico-de-animais:Sigla_Do_Fiscalizador>IBAMA</trafico-de-animais:Sigla_Do_Fiscalizador>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Lei_Contra_Trafico_De_Arara_Azul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Lei_Contra_Trafico_De_Arara_Azul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Decreto"/>
+        <trafico-de-animais:regulamenta rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Trafico_De_Arara_Azul"/>
+        <trafico-de-animais:vigenteEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Brasil"/>
+        <trafico-de-animais:Data_De_Promulgacao>10/10/1990</trafico-de-animais:Data_De_Promulgacao>
+        <trafico-de-animais:Nome_Do_Decreto>Lei Contra Tráfico de Arara Azul</trafico-de-animais:Nome_Do_Decreto>
+        <trafico-de-animais:Punicao>Pagar uma multa de x reais e receber x anos de prisão</trafico-de-animais:Punicao>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Lei_Contra_Trafico_De_Macaco_Prego_Dourado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Lei_Contra_Trafico_De_Macaco_Prego_Dourado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Decreto"/>
+        <trafico-de-animais:regulamenta rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Trafico_Do_Macaco_Prego_Dourado"/>
+        <trafico-de-animais:vigenteEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Brasil"/>
+        <trafico-de-animais:Data_De_Promulgacao>09/04/2001</trafico-de-animais:Data_De_Promulgacao>
+        <trafico-de-animais:Nome_Do_Decreto>Lei Contra Tráfico de Macaco Prego Dourado</trafico-de-animais:Nome_Do_Decreto>
+        <trafico-de-animais:Punicao>Pagar x reais em multa</trafico-de-animais:Punicao>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Leste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Leste"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Macaco_Prego_Dourado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Macaco_Prego_Dourado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+        <trafico-de-animais:contrabandeadoPor rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Trafico_Do_Macaco_Prego_Dourado"/>
+        <trafico-de-animais:estaNaCategoria rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Criticamente_Em_Risco"/>
+        <trafico-de-animais:nativoDoPais rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Brasil"/>
+        <trafico-de-animais:Nome_Cientifico>Sapajus flavius</trafico-de-animais:Nome_Cientifico>
+        <trafico-de-animais:Nome_Comum>Macaco-prego-dourado</trafico-de-animais:Nome_Comum>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Maritmo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Maritmo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Medio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Medio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Menos_Preocupante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Menos_Preocupante"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nao_Avaliado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nao_Avaliado"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nordeste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nordeste"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Norte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Norte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Regiao"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Oeste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Oeste"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#PMA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#PMA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador"/>
+        <trafico-de-animais:fiscaliza rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_Da_Arara_Azul"/>
+        <trafico-de-animais:fiscaliza rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_Do_Macaco_Prego_Dourado"/>
+        <trafico-de-animais:Nome_Do_Fiscalizador>Polícia Militar Ambiental</trafico-de-animais:Nome_Do_Fiscalizador>
+        <trafico-de-animais:Sigla_Do_Fiscalizador>PMA</trafico-de-animais:Sigla_Do_Fiscalizador>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Papa_Capim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Papa_Capim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+        <trafico-de-animais:contrabandeadoEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_De_Papa_Capim"/>
+        <trafico-de-animais:estaNaCategoria rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Menos_Preocupante"/>
+        <trafico-de-animais:nativoDoPais rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Brasil"/>
+        <trafico-de-animais:Nome_Cientifico>Sporophila nigricollis</trafico-de-animais:Nome_Cientifico>
+        <trafico-de-animais:Nome_Comum>Papa-capim</trafico-de-animais:Nome_Comum>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Quase_Ameacado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Quase_Ameacado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Categoria_De_Risco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Republica_Das_Ilhas_Mauricias -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Republica_Das_Ilhas_Mauricias">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Caca_Do_Dodo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Caca_Do_Dodo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_Da_Arara_Azul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_Da_Arara_Azul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+        <trafico-de-animais:temComoFinal rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nordeste"/>
+        <trafico-de-animais:temComoOrigem rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Norte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_De_Papa_Capim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_De_Papa_Capim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+        <trafico-de-animais:temComoFinal rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Sudeste"/>
+        <trafico-de-animais:temComoOrigem rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Norte"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_Do_Macaco_Prego_Dourado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_Do_Macaco_Prego_Dourado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+        <trafico-de-animais:temComoFinal rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Sudeste"/>
+        <trafico-de-animais:temComoOrigem rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nordeste"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Extracao_De_Marfim_Do_Elefante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Extracao_De_Marfim_Do_Elefante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Sudeste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Sudeste"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Sul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Sul"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Tanzania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Tanzania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Terrestre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Terrestre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Vias_De_Escoamento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Trafico_De_Arara_Azul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Trafico_De_Arara_Azul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+        <trafico-de-animais:causa rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Danos_Ao_Ecossistema"/>
+        <trafico-de-animais:contrabandeiaEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Terrestre"/>
+        <trafico-de-animais:realizadoEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_Da_Arara_Azul"/>
+        <trafico-de-animais:Extracao_De_Partes_Do_Animal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</trafico-de-animais:Extracao_De_Partes_Do_Animal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Trafico_Do_Macaco_Prego_Dourado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Trafico_Do_Macaco_Prego_Dourado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+        <trafico-de-animais:causa rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Destruicao_De_Habitat_Natural"/>
+        <trafico-de-animais:contrabandeiaEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Terrestre"/>
+        <trafico-de-animais:realizadoEm rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rota_De_Contrabando_Do_Macaco_Prego_Dourado"/>
+        <trafico-de-animais:Extracao_De_Partes_Do_Animal rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</trafico-de-animais:Extracao_De_Partes_Do_Animal>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Vulneravel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Vulneravel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Decreto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Efeitos_Na_Biodiversidade"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Fiscalizador"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Meios_De_Deteccao_E_Prevencao"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Pais"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Regiao"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Vias_De_Escoamento"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Alto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Ausente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Baixo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Medio"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Criticamente_Em_Risco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Dados_Deficientes"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Em_Perigo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extinto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extinto_Na_Natureza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Menos_Preocupante"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nao_Avaliado"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Quase_Ameacado"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Vulneravel"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Data_De_Promulgacao"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Extracao_De_Partes_Do_Animal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nome_Cientifico"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nome_Comum"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nome_Do_Decreto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Nome_Do_Fiscalizador"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Punicao"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Sigla_Do_Fiscalizador"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/ea">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/mt">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/f">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Define a espécie traficada por um método de tráfico a partir da rota em que ocorre o contrabando dessa espécie</rdfs:comment>
+        <rdfs:label>Metodo_A_Partir_Da_Rota</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/ea"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeadoEm"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/ea"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#realizadoEm"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/mt"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeadoPor"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/ea"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/mt"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Define o pais onde ocorre um trafico a partir do pais natural da especie contrabandeada por esse metodo de trafico</rdfs:comment>
+        <rdfs:label>Pais_do_Metodo_de_Trafico</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/ea"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#nativoDoPais"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/ea"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeadoPor"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/ea"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/mt"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#traficaNoPais"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/mt"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Define a espécie traficada em uma rota de tráfico a partir do método de trafico empregado em cima dessa espécie</rdfs:comment>
+        <rdfs:label>Rota_A_Partir_Do_Metodo</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Especies_De_Animais"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/ea"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeadoPor"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/ea"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/mt"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#realizadoEm"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/mt"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#contrabandeadoEm"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/ea"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>define o pais da rota de trafico de acordo com o pais onde ocorre o trafico</rdfs:comment>
+        <rdfs:label>Pais_da_Rota_de_Trafico</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Metodo_De_Trafico"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/mt"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#traficaNoPais"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/mt"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#realizadoEm"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/mt"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#rotaDoPais"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Define o pais de operação de um orgão fiscalizador a partir do país onde se encontram as rotas fiscalizadas por ele</rdfs:comment>
+        <rdfs:label>Pais_de_Operacao_do_Orgao_Fiscalizador</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#rotaDoPais"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#fiscaliza"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/f"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#fiscalizaNoPais"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/f"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>define as região de atuação de um orgão fiscalizador com base na região de final de uma rota de contrabando</rdfs:comment>
+        <rdfs:label>Regiao_de_Atuacao_do_Fiscalizador_2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#fiscalizadoPor"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/f"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#temComoFinal"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#atuaEm"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/f"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>define as região de atuação de um orgão fiscalizador com base na região de origem de uma rota de contrabando</rdfs:comment>
+        <rdfs:label>Regiao_de_Atuacao_do_Fiscalizador_1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#Rotas_De_Contrabando"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#fiscalizadoPor"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/f"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#temComoOrigem"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/rt"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#atuaEm"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/f"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

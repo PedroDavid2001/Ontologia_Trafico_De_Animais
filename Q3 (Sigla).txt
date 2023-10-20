@@ -1,0 +1,10 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX tranim: <http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#>
+
+SELECT ?meios
+WHERE {
+	?fisc tranim:Sigla_Do_Fiscalizador "PMA"
+	. ?fisc tranim:utiliza ?meios
+ }

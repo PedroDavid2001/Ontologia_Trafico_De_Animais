@@ -1,0 +1,11 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX tranim: <http://www.semanticweb.org/pedro/ontologies/2023/8/trafico-de-animais#>
+
+SELECT ?reg
+WHERE {
+	?anim tranim:Nome_Comum "Arara-azul"
+	. ?trafic tranim:contrabandeia ?anim 
+	. ?reg tranim:regulamenta ?trafic
+ }
